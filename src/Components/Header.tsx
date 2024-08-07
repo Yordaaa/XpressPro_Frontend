@@ -3,24 +3,21 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", to: "#" },
-  { name: "Cars", to: "#" },
-  { name: "Booking", to: "#" },
-  { name: "AboutUs", to: "#" },
-  { name: "ContactUs", to: "#" },
+  { name: "Home", to: "/" },
+  { name: "Cars", to: "/cars" },
+  { name: "Booking", to: "/booking" },
+  { name: "AboutUs", to: "/aboutus" },
+  { name: "ContactUs", to: "/contactus" },
   { name: "Blogs", to: "#" },
 ];
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="" >
-      <nav
-        
-        className="flex items-center justify-between p-6 lg:px-8"
-      >
+    <div className="px-5">
+      <nav className="flex items-center justify-between p-4 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link to="#" className="text-xl font-bold -m-1.5 p-1.5">
+          <Link to="/" className="text-2xl font-bold -m-1.5 p-1.5">
             XpressPro
           </Link>
         </div>
@@ -46,11 +43,16 @@ function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
-          
-          <Link to="#" className="border border-green-600 text-sm font-semibold leading-6 text-gray-900 p-1 px-3 rounded-md">
+          <Link
+            to="/login"
+            className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
+          >
             Log in
           </Link>
-          <Link to="#" className="bg-green-600 hover:bg-green-800 text-sm font-semibold leading-6 text-white p-1 px-2 rounded-md">
+          <Link
+            to="#"
+            className="bg-green-600 hover:bg-green-800 text-sm  leading-6 text-white p-1 px-2 rounded-md"
+          >
             Sign Up
           </Link>
         </div>
@@ -63,12 +65,12 @@ function Header() {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="#" className="text-xl font-bold -m-1.5 p-1.5">
+            <Link to="/" className="text-xl font-bold -m-1.5 p-1.5">
               XpressPro
             </Link>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="/login"
                 className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
               >
                 Log in

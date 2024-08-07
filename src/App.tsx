@@ -1,12 +1,13 @@
 import AppRoutes from "./AppRoutes";
-import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Header2 from "./Components/Header2";
 
 export default function App() {
   return (
     <>
-      <Header />                   
+       <Header2 />               
       <AppRoutes />
-      
+      <Footer />
     </>
   );
 }
