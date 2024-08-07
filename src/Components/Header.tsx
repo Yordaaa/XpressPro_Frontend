@@ -8,14 +8,14 @@ const navigation = [
   { name: "Booking", to: "/booking" },
   { name: "AboutUs", to: "/aboutus" },
   { name: "ContactUs", to: "/contactus" },
-  { name: "Blogs", to: "#" },
+  { name: "Blogs", to: "blogs" },
 ];
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="px-5">
-      <nav className="flex items-center justify-between p-4 lg:px-8">
+      <nav className="flex items-center justify-between p-2 lg:px-8">
         <div className="flex lg:flex-1">
           <Link to="/" className="text-2xl font-bold -m-1.5 p-1.5">
             XpressPro
@@ -27,8 +27,8 @@ function Header() {
             onClick={() => setMobileMenuOpen(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
-            <span className="sr-only">Open main menu</span>
-            menu
+           
+            <i className="fas fa-bars text-xl"></i>
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
@@ -80,7 +80,7 @@ function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
               >
-                Close
+                <i className="fas fa-times text-xl"></i>
               </button>
             </div>
           </div>

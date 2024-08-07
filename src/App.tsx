@@ -5,7 +5,7 @@ import Header2 from "./Components/Header2";
 export default function App() {
   return (
     <>
-       <Header2 />               
+      <Header2 />
       <AppRoutes />
       <Footer />
     </>
