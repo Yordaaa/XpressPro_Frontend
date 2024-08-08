@@ -1,4 +1,5 @@
 import Header from "../Components/Header";
+import location from "/location.png";
 
 function AboutUs() {
   return (
@@ -98,6 +99,23 @@ function AboutUs() {
                 </dd>
               </div>
             </dl>
+          </div>
+        </div>
+      </div>
+      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-5 lg:grid-cols-12">
+        <div className="lg:mt-0 lg:col-span-5 lg:flex">
+          <img src={location} />
+        </div>
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <div>
+            <h1 className="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none text-center">
+              We are available in all <span className="text-green-600"> Ethiopian </span> locations
+            </h1>
+            <h1 className="max-w-2xl mb-4 text-2xl tracking-tight leading-none text-center">
+              providing you with reliable car rental services wherever you are.
+              Experience the freedom to explore stunning landscapes and vibrant
+              cities at your own pace!
+            </h1>
           </div>
         </div>
       </div>

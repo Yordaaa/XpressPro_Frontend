@@ -32,16 +32,7 @@ function Login() {
                 <div className="w-full bg-white rounded-lg md:mt-0 sm:max-w-md xl:p-0 border">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                         <h1 className="text-xl font-semibold  text-gray-900 md:text-2xl flex">Welcome back</h1>
-                        <div className="flex gap-1">
-                            <div className="flex border w-full rounded-md border-gray-300 py-1 justify-center items-center">
-                                <img className="h-8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ99clJ9uWmomyjNVgO-PjeZrnur-_sswiUg&s" />
-                                <button className="text-sm">Login with google</button>
-                            </div>
-                            <div className="flex border w-full rounded-md border-gray-300 py-1 justify-center items-center ">
-                                <img className="h-8" src="https://logowik.com/content/uploads/images/facebook-new-2023-icon9594.logowik.com.webp" />
-                                <button className="text-sm">Login with facebook</button>
-                            </div>
-                        </div>
+
                         <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                             <div className="relative items-center">
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
@@ -101,7 +92,7 @@ function Login() {
                             </button>
                             <p className="text-sm text-gray-800">
                                 Don’t have an account yet?
-                                <Link to="/before" className=" hover:underline text-blue-900">
+                                <Link to="/signup" className=" hover:underline text-blue-900">
                                     Sign up
                                 </Link>
                             </p>
