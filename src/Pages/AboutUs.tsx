@@ -31,7 +31,7 @@ function AboutUs() {
       </section>
       <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-16 mx-auto  ">
         <img
-          src="https://static.vecteezy.com/system/resources/thumbnails/013/087/516/small_2x/diagonal-golden-line-glass-cube-on-black-background-illustration-of-website-banner-poster-sign-corporate-business-social-media-post-billboard-agency-advertising-media-motion-video-animation-wave-vector.jpg"
+          src="https://img.freepik.com/premium-photo/dark-green-smooth-wall-texture-background_1197144-629.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723075200&semt=ais_hybrid"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-90"
         />

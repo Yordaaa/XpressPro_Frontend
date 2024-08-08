@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <div className="relative isolate overflow-hidden bg-[#262626] py-12  mx-auto  mt-20">
-       
+      <img src="https://img.freepik.com/premium-photo/dark-green-smooth-wall-texture-background_1197144-629.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723075200&semt=ais_hybrid" alt="" className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" />
         <div className="max-w-screen-2xl mx-auto">
           <div className=" mx-3 md:mx-7 lg:mx-24 text-white ">
             <div className="md:flex md:justify-between">
