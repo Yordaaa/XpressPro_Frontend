@@ -1,6 +1,13 @@
-import React from "react";
+import * as React from 'react';
+import dayjs from 'dayjs';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 function Search() {
+  const [value, setValue] = React.useState(dayjs(''));
+    const [startDate, setStartDate] = React.useState(dayjs());
   return (
     <div className="mx-5 md:mx-20 py-2 ">
       <div className="h-full bg-gray-100 w-full mx-auto mt-16 rounded-md ">
@@ -63,10 +70,10 @@ function Search() {
         </div>
 
         <hr className="w-[80%] mx-auto mt-3" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  justify-between mx-3 lg:mx-10 pt-5 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  justify-between mx-3 lg:mx-10 pt-5 gap-2 items-center">
           <div>
             <select className=" rounded-md border-gray-400 border  py-2 pl-2 pr-7 text-gray-800 sm:text-sm w-full">
-              <option>Pick your up location</option>
+              <option>Start Place</option>
               <option>Addis Ababa</option>
               <option>Arba minch</option>
               <option>Hawassa</option>
@@ -77,7 +84,7 @@ function Search() {
           </div>
           <div>
             <select className=" rounded-md border-gray-400 border  py-2 pl-2 pr-7 text-gray-800 sm:text-sm w-full">
-              <option>Pick your up location</option>
+              <option>End place</option>
               <option>Addis Ababa</option>
               <option>Arba minch</option>
               <option>Hawassa</option>
@@ -86,28 +93,19 @@ function Search() {
               <option>Hawassa</option>
             </select>
           </div>
-          <div>
-            <select className=" rounded-md border-gray-400 border  py-2 pl-2 pr-7 text-gray-800 sm:text-sm w-full">
-              <option>Pick your up location</option>
-              <option>Addis Ababa</option>
-              <option>Arba minch</option>
-              <option>Hawassa</option>
-              <option>Addis Ababa</option>
-              <option>Arba minch</option>
-              <option>Hawassa</option>
-            </select>
-          </div>
-          <div>
-            <select className=" rounded-md border-gray-400 border  py-2 pl-2 pr-7 text-gray-800 sm:text-sm w-full">
-              <option>Pick your up location</option>
-              <option>Addis Ababa</option>
-              <option>Arba minch</option>
-              <option>Hawassa</option>
-              <option>Addis Ababa</option>
-              <option>Arba minch</option>
-              <option>Hawassa</option>
-            </select>
-          </div>
+          <div className='col-span-2'>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={['DatePicker', 'DatePicker']}>
+                    <DatePicker
+                        label="Start date"
+                        value={startDate}
+                        onChange={(newValue) => setStartDate(newValue)}
+                    />
+                    <DatePicker label="End-date" value={value} onChange={(newValue) => setValue(newValue)} />
+                </DemoContainer>
+            </LocalizationProvider>
+        </div>
+          
         </div>
         <div className="mx-10 py-3">
           <button className="bg-green-600 text-white w-full py-1 rounded-lg">
