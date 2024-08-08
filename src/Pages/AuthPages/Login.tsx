@@ -80,7 +80,7 @@ function Login() {
               </button>
               <p className="text-sm text-gray-800">
                 Don’t have an account yet?
-                <Link to="/before" className=" hover:underline text-blue-900">
+                <Link to="/signup" className=" hover:underline text-blue-900">
                   Sign up
                 </Link>
               </p>

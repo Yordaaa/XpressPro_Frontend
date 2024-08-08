@@ -5,6 +5,8 @@ import Booking from "./Pages/Booking";
 import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
 import Login from "./Pages/AuthPages/Login";
+import Signup from "./Pages/AuthPages/Signup";
+
 
 function AppRoutes() {
   return <Routes>
@@ -14,6 +16,7 @@ function AppRoutes() {
     <Route path="contactus" element={<ContactUs />} />
     <Route path="aboutus" element={<AboutUs />} />
     <Route path="login" element={<Login />} />
+    <Route path="signup" element={<Signup />} />
   </Routes>;
 }
 

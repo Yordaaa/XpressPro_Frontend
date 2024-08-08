@@ -50,7 +50,7 @@ function Header() {
             Log in
           </Link>
           <Link
-            to="#"
+            to="/signup"
             className="bg-green-600 hover:bg-green-800 text-sm  leading-6 text-white p-1 px-2 rounded-md"
           >
             Sign Up
