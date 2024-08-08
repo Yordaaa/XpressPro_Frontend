@@ -5,7 +5,7 @@ function Signup() {
   return (
     <section>
       <Header />
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-5">
+      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-10">
         <div className="w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-2xl xl:p-0">
           <div className=" gap-3 text-gray-800 max-w-2xl py-5 p-5">
             <h1 className="text-xl font-bold text-gray-900 md:text-2xl flex justify-center pb-3">
