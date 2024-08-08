@@ -3,12 +3,8 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <div className="relative isolate overflow-hidden bg-gray-900 py-12  mx-auto  mt-10">
-        <img
-          src="https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg"
-          alt=""
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-        />
+      <div className="relative isolate overflow-hidden bg-[#262626] py-12  mx-auto  mt-20">
+       
         <div className="max-w-screen-2xl mx-auto">
           <div className=" mx-3 md:mx-7 lg:mx-24 text-white ">
             <div className="md:flex md:justify-between">

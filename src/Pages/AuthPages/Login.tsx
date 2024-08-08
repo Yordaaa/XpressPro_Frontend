@@ -105,6 +105,23 @@ function Login() {
                                     Sign up
                                 </Link>
                             </p>
+                            <div className="grid grid-cols-3 items-center text-center">
+                                <label>
+                                    <hr className="text-red-600" />{' '}
+                                </label>
+                                <span className="">or login with</span>
+                                <hr />
+                            </div>
+                            <div className="flex gap-1">
+                                <div className="flex border w-full rounded-md border-gray-300 py-1 justify-center items-center">
+                                    <img className="h-8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ99clJ9uWmomyjNVgO-PjeZrnur-_sswiUg&s" />
+                                    <button className="text-sm">Google</button>
+                                </div>
+                                <div className="flex border w-full rounded-md border-gray-300 py-1 justify-center items-center ">
+                                    <img className="h-8" src="https://logowik.com/content/uploads/images/facebook-new-2023-icon9594.logowik.com.webp" />
+                                    <button className="text-sm">facebook</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

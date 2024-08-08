@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Link } from 'react-router-dom';
+import { useLogoutApiMutation } from '../redux/features/auth/authApiSlice';
+import { useDispatch } from 'react-redux';
+import { logout } from '../redux/features/auth/authSlice';
+import { toast } from 'react-toastify';
 
 const navigation = [
     { name: 'Home', to: '/' },
@@ -8,14 +12,26 @@ const navigation = [
     { name: 'Booking', to: '/booking' },
     { name: 'AboutUs', to: '/aboutus' },
     { name: 'ContactUs', to: '/contactus' },
-    { name: 'Blogs', to: '#' }
+    { name: 'Blogs', to: 'blogs' }
 ];
 function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const dispatch = useDispatch();
+
+    const [logoutApi] = useLogoutApiMutation();
+
+    const logoutHandler = async () => {
+        try {
+            await logoutApi({});
+            dispatch(logout());
+        } catch (error: any) {
+            toast.error(error.message);
+        }
+    };
 
     return (
         <div className="px-5">
-            <nav className="flex items-center justify-between p-4 lg:px-8">
+            <nav className="flex items-center justify-between p-2 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Link to="/" className="text-2xl font-bold -m-1.5 p-1.5">
                         XpressPro
@@ -23,8 +39,7 @@ function Header() {
                 </div>
                 <div className="flex lg:hidden">
                     <button type="button" onClick={() => setMobileMenuOpen(true)} className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                        <span className="sr-only">Open main menu</span>
-                        menu
+                        <i className="fas fa-bars text-xl"></i>
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -36,7 +51,9 @@ function Header() {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
                     {localStorage.getItem('userInfo') ? (
-                        <button className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">Log out</button>
+                        <button onClick={logoutHandler} className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
+                            Log out
+                        </button>
                     ) : (
                         <>
                             <Link to="/login" className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
@@ -61,7 +78,7 @@ function Header() {
                                 Log in
                             </a>
                             <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
-                                Close
+                                <i className="fas fa-times text-xl"></i>
                             </button>
                         </div>
                     </div>

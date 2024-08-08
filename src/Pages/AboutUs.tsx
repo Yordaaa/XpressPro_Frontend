@@ -10,12 +10,11 @@ function AboutUs() {
             'url("https://t3.ftcdn.net/jpg/04/37/54/90/360_F_437549071_7uQvtqTIgd50l2r0OZ1g0zJnLwnzJmIG.jpg")',
         }}
       >
-        <div className="bg-white bg-opacity-20 sticky">
+        <div className="bg-white bg-opacity-20 ">
           <Header />
         </div>
 
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
-          {/* First section content */}
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none text-center">
               We offer customers a wide range of{" "}
