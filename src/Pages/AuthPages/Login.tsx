@@ -32,11 +32,10 @@ function Login() {
                 <div className="w-full bg-white rounded-lg md:mt-0 sm:max-w-md xl:p-0 border">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                         <h1 className="text-xl font-semibold  text-gray-900 md:text-2xl flex">Welcome back</h1>
-
                         <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                             <div className="relative items-center">
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
-                                    Email
+                                    Emaisl
                                 </label>
                                 <div className="flex">
                                     <div className="fas fa-envelope text-gray-700 border border-gray-300 rounded-s-lg bg-gray-50 p-3 items-center"></div>
@@ -91,7 +90,7 @@ function Login() {
                                 {isLoading ? 'Signing in...' : 'Sign in'}
                             </button>
                             <p className="text-sm text-gray-800">
-                                Don’t have an account yet?
+                                 Don’t have an account yet?
                                 <Link to="/signup" className=" hover:underline text-blue-900">
                                     Sign up
                                 </Link>

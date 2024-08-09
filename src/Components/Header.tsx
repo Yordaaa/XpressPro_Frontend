@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLogoutApiMutation } from '../redux/features/auth/authApiSlice';
+import { logout } from '../redux/features/auth/authSlice';
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const navigation = [
     { name: 'Home', to: '/' },
@@ -12,21 +16,33 @@ const navigation = [
 ];
 
 function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    const dispatch = useDispatch();
 
+    const [logoutApi] = useLogoutApiMutation();
+
+    const handleLogOut = async () => {
+        try {
+            await logoutApi({}).unwrap();
+            dispatch(logout());
+        } catch (error: any) {
+            toast.error(error.message);
+        }
+    };
+ 
   const handleLinkClick = () => {
       setMobileMenuOpen(false);
   };
 
     return (
         <div className="px-5 fixed top-10 left-0 right-0 z-50 bg-white shadow-md">
-            <img
+          <img
                 src="https://t3.ftcdn.net/jpg/04/37/54/90/360_F_437549071_7uQvtqTIgd50l2r0OZ1g0zJnLwnzJmIG.jpg"
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
             />
-            <nav className="flex items-center justify-between p-2 lg:px-8 max-w-screen-2xl mx-auto">
+            <nav className="flex items-center justify-between p-2 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Link to="/" className="text-2xl font-bold -m-1.5 p-1.5">
                         XpressPro
@@ -39,18 +55,30 @@ function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <Link key={item.name} to={item.to} className={`text-md font-semibold leading-6 text-gray-900 ${location.pathname === item.to ? 'bg-gray-600 text-white' : ''} p-2 rounded`}>
+                        <Link key={item.name} to={item.to} className={`text-md font-semibold leading-6 text-gray-900 ${location.pathname === item.to ? 'bg-gray-700 text-white' : ''} p-2 rounded`}>
                             {item.name}
                         </Link>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
-                    <Link to="/login" className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
-                        Log in
-                    </Link>
-                    <Link to="/signup" className="bg-green-600 hover:bg-green-800 text-sm leading-6 text-white p-1 px-2 rounded-md">
-                        Sign Up
-                    </Link>
+                    {localStorage.getItem('userInfo') ? (
+                        <button
+                            onClick={handleLogOut}
+                            type="button"
+                            className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
+                        >
+                            Log out
+                        </button>
+                    ) : (
+                        <>
+                            <Link to="/login" className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
+                                Log in
+                            </Link>
+                            <Link to="/signup" className="bg-green-600 hover:bg-green-800 text-sm leading-6 text-white p-1 px-2 rounded-md">
+                                Sign Up
+                            </Link>
+                        </>
+                    )}
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -71,16 +99,16 @@ function Header() {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className=" py-6">
-                            {navigation.map((item) => (
-                                <Link
+                            <div className="py-6">
+                                {navigation.map((item) => (
+                                     <Link
                                     key={item.name}
                                     to={item.to}
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     onClick={handleLinkClick}
                                 >
                                     {item.name}
-                                    </Link>
+                                </Link>
                                 ))}
                             </div>
                         </div>

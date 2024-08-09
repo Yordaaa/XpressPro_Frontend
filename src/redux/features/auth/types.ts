@@ -13,9 +13,23 @@ export interface UserProps {
     };
 }
 
-export interface CreateUserInputProps {
+export interface LoginUserInputProps {
     password: string;
     email: string;
+}
+
+export interface RegistrationInputProps {
+    email: string;
+    password: string;
+    confirmPassword: string;
+    firstName?: string;
+    lastName?: string;
+    phoneNumber?: string;
+}
+
+export interface RegistrationResponseProps {
+    success: boolean;
+    message?: string;
 }
 
 export interface authStateProps {
