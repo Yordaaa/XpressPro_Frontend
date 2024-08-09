@@ -35,7 +35,7 @@ function Login() {
                         <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                             <div className="relative items-center">
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
-                                    Emaisl
+                                    Email
                                 </label>
                                 <div className="flex">
                                     <div className="fas fa-envelope text-gray-700 border border-gray-300 rounded-s-lg bg-gray-50 p-3 items-center"></div>

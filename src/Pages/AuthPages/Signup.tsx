@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import Header from '../../Components/Header';
 import { useState } from 'react';
 import { useRegistrationMutation } from '../../redux/features/auth/authApiSlice';
 import { toast } from 'react-toastify';
@@ -33,7 +32,6 @@ function Signup() {
     };
     return (
         <section>
-            <Header />
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-10">
                 <div className="w-full bg-white rounded-lg shadow-md md:mt-0 sm:max-w-2xl xl:p-0">
                     <div className=" gap-3 text-gray-800 max-w-2xl py-5 p-5">
@@ -61,6 +59,7 @@ function Signup() {
                                             id="name"
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-e-lg block w-full p-2.5"
                                             placeholder="Enter first name"
+                                            required
                                             value={firstName}
                                             onChange={(e) => setFirstName(e.target.value)}
                                         />
@@ -78,6 +77,7 @@ function Signup() {
                                             id="lastName"
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-e-lg block w-full p-2.5"
                                             placeholder="Enter last name"
+                                            required
                                             value={lastName}
                                             onChange={(e) => setLastName(e.target.value)}
                                         />
@@ -97,6 +97,7 @@ function Signup() {
                                             id="email"
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-e-lg block w-full p-2.5"
                                             placeholder="Enter email"
+                                            required
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
@@ -114,6 +115,7 @@ function Signup() {
                                             id="phoneNumber"
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-e-lg block w-full p-2.5"
                                             placeholder="Enter phone number"
+                                            required
                                             value={phoneNumber}
                                             onChange={(e) => setPhoneNumber(e.target.value)}
                                         />
@@ -131,6 +133,7 @@ function Signup() {
                                             name="password"
                                             id="password"
                                             placeholder="Enter password"
+                                            required
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-e-lg block w-full p-2.5"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
@@ -148,6 +151,7 @@ function Signup() {
                                             name="confirmPassword"
                                             id="confirmPassword"
                                             placeholder="Confirm password"
+                                            required
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-e-lg block w-full p-2.5"
                                             value={confirmPassword}
                                             onChange={(e) => setConfirmPassword(e.target.value)}

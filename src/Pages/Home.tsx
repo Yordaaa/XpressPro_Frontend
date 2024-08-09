@@ -20,7 +20,7 @@ function Home() {
                 <div className="px-6 pt-14 lg:px-8">
                     <div className="text-center">
                         <h1 className=" use text-4xl font-bold tracking-tight text-white sm:text-7xl">
-                            Looking for a <span className="text-green-600">vehicle?</span>
+                            Looking for a <span className="text-green-600 font-bold">vehicle?</span>
                         </h1>
                         <div className="text-4xl text-white">You're in the right place.</div>
                     </div>
