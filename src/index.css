@@ -2,9 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.use {
+*{font-family: Quicksand, sans-serif;
+  font-weight: 500;}
+use {
   font-family: Quicksand, sans-serif;
-  font-weight: 500;
+  font-weight: 700;
 }
 html {
   font-size: 16px;

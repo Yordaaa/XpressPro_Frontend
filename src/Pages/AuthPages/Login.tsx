@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import Header from '../../Components/Header';
+
 import { useState } from 'react';
 import { useLoginMutation } from '../../redux/features/auth/authApiSlice';
 import { toast } from 'react-toastify';
@@ -27,7 +27,7 @@ function Login() {
     };
     return (
         <section>
-            <Header />
+          
             <div className="flex flex-col items-center mt-10 px-6 py-8 mx-auto lg:py-0">
                 <div className="w-full bg-white rounded-lg md:mt-0 sm:max-w-md xl:p-0 border">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

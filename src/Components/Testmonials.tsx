@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-function Blogs() {
+function Testmonials() {
   return (
     <>
-      <div className="bg-white py-12 sm:py-16 px-10">
+      <div className="bg-white py-12 sm:py-16 px-10 max-w-screen-2xl mx-auto">
         <div className="mx-auto px-6 lg:px-8">
           <div className="mx-auto lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -136,4 +136,4 @@ function Blogs() {
   );
 }
 
-export default Blogs;
+export default Testmonials;
