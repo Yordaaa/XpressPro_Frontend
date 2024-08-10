@@ -2,7 +2,8 @@ import car from "/car-2.png";
 
 function Features() {
   return (
-    <div className="mx-20">
+    <div className="max-w-screen-2xl mx-auto">
+      <div className="mx-5 md:mx-10 lg:mx-20">
       <h2 className="text-3xl font-bold tracking-tight leading-none text-gray-900 md:text-4xl flex justify-center pt-10">
         Features
       </h2>
@@ -52,6 +53,7 @@ function Features() {
             <i className="fas fa-map-pin text-white bg-green-600 py-4 px-3 rounded-md h-fit m-2"></i>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
