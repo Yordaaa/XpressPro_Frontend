@@ -60,7 +60,7 @@ function Header() {
                             </button>
                         ) : (
                             <>
-                                <a href="/login" className="border bg-green-600 text-sm leading-6 text-gray-900 text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
+                                <a href="/login" className="border bg-green-600 text-sm leading-6 text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
                                     Log in
                                 </a>
                             </>
@@ -105,7 +105,7 @@ function Header() {
                         <div className="flex flex-1 justify-end gap-2 pr-3">
                             {localStorage.getItem('userInfo') ? (
                                 <div className="flex gap-3 items-center">
-                                    <h3>{userInfo.profile.firstName}</h3>
+                                    
                                     <button
                                         onClick={handleLogOut}
                                         type="button"
