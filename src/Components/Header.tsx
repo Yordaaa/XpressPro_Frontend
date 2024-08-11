@@ -30,19 +30,19 @@ function Header() {
             toast.error(error.message);
         }
     };
- 
-  const handleLinkClick = () => {
-      setMobileMenuOpen(false);
-  };
+
+    const handleLinkClick = () => {
+        setMobileMenuOpen(false);
+    };
 
     return (
-        <div className="px-5 fixed top-10 left-0 right-0 z-50 bg-white shadow-md">
-          <img
+        <div className="px-5 fixed top-10 left-0 right-0 z-50 bg-white shadow-md ">
+            <img
                 src="https://t3.ftcdn.net/jpg/04/37/54/90/360_F_437549071_7uQvtqTIgd50l2r0OZ1g0zJnLwnzJmIG.jpg"
                 alt=""
                 className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
             />
-            <nav className="flex items-center justify-between p-2 lg:px-8">
+            <nav className="flex items-center justify-between p-2 lg:px-8 max-w-screen-2xl mx-auto">
                 <div className="flex lg:flex-1">
                     <Link to="/" className="text-2xl font-bold -m-1.5 p-1.5">
                         XpressPro
@@ -98,14 +98,14 @@ function Header() {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="py-6">
                                 {navigation.map((item) => (
-                                     <Link
-                                    key={item.name}
-                                    to={item.to}
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    onClick={handleLinkClick}
-                                >
-                                    {item.name}
-                                </Link>
+                                    <Link
+                                        key={item.name}
+                                        to={item.to}
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        onClick={handleLinkClick}
+                                    >
+                                        {item.name}
+                                    </Link>
                                 ))}
                             </div>
                         </div>

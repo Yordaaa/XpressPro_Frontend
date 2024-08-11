@@ -79,7 +79,7 @@ export default function Cars() {
                 <Dialog open={mobileFiltersOpen} onClose={setMobileFiltersOpen} className="relative z-40 lg:hidden">
                     <DialogBackdrop transition className="fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0" />
 
-                    <div className="fixed inset-0 z-40 flex">
+                    <div className="fixed inset-0 pt-20 z-40 flex">
                         <DialogPanel
                             transition
                             className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
@@ -95,7 +95,7 @@ export default function Cars() {
                             {/* Filters */}
                             <form className="mt-4 border-t border-gray-200">
                                 <h3 className="sr-only">Categories</h3>
-                                <div>hey</div>
+                                <div>some text</div>
 
                                 {filters.map((section) => (
                                     <Disclosure key={section.id} as="div" className="border-t border-gray-200 px-4 py-6">
@@ -221,41 +221,3 @@ export default function Cars() {
     );
 }
 
-{
-    /* <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-12 lg:max-w-7xl lg:px-8">
-          <h2 className="use text-4xl font-bold tracking-tight text-gray-900 text-center">
-            OUR VEHICLES
-          </h2>
-          
-            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-              {products.map((product) => (
-                <div key={product.id} className="group shadow-md p-2 rounded-md">
-                  <div className=" rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75">
-                    <img
-                      src={product.imageSrc}
-                      className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                    />
-                  </div>
-                  <div className="mt-4 flex justify-between">
-                    <div>
-                      <h3 className="font-semibold text-gray-900">
-                        <a href="">
-                          
-                          {product.name}
-                        </a>
-                      </h3>
-                      <p className="mt-1 text-sm text-gray-700">
-                        <i className="fas fa-user pr-2"></i>4 person <i className="fas fa-shopping-bag px-2"></i>3 laugage</p>
-                    </div>
-                    <p className="text-sm font-medium text-gray-900">
-                      {product.price}
-                    </p>
-                  </div>
-                  <button className="w-full bg-green-600 text-white py-1 rounded-md mt-3">Book now</button>
-                </div>
-              ))}
-            </div>
-        </div>
-      </div> */
-}

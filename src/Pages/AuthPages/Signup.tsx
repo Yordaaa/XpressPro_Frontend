@@ -173,7 +173,7 @@ function Signup() {
                                 </div>
                             </div>
                             <button disabled={isLoading} type="submit" className="w-full text-white bg-green-600 hover:opacity-90 font-medium rounded-lg  px-5 py-2.5 text-center">
-                                {isLoading ? 'Registraring....' : 'Create an acount'}
+                                {isLoading ? 'Registering....' : 'Create an acount'}
                             </button>
                             <p className="text-sm  text-gray-600">
                                 Already have an account?
