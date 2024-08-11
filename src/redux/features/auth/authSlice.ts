@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: authStateProps = {
-    userInfo: null
+    userInfo: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')!) : null
 };
 
 export const authSlice = createSlice({

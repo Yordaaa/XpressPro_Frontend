@@ -71,7 +71,7 @@ function Header() {
                         </button>
                     ) : (
                         <>
-                            <Link to="/login" className="border bg-green-600 text-sm leading-6 text-gray-900 text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
+                            <Link to="/login" className="border bg-green-600 text-sm leading-6  text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
                                 Log in
                             </Link>
                         </>
