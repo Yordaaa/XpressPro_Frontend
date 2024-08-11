@@ -12,8 +12,7 @@ import pickup from '/pickup.png';
 import compact from '/compact.png';
 
 function Search() {
-    const [value, setValue] = React.useState(dayjs(''));
-    const [startDate, setStartDate] = React.useState(dayjs());
+    const [startDate, setStartDate] = React.useState<dayjs.Dayjs | null>(dayjs());
     return (
         <div className="mx-5 md:mx-20 py-2 ">
             <div className="h-full bg-gray-100 w-full mx-auto mt-16 rounded-md ">

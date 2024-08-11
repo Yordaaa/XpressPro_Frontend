@@ -5,7 +5,6 @@ import { useLogoutApiMutation } from '../redux/features/auth/authApiSlice';
 import { logout } from '../redux/features/auth/authSlice';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
-import { useSelector } from 'react-redux';
 
 const navigation = [
     { name: 'Home', to: '/' },
@@ -20,9 +19,9 @@ function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation();
     const dispatch = useDispatch();
-    const { userInfo } = useSelector((state) => state.auth);
+
     const [logoutApi] = useLogoutApiMutation();
-  
+
     const handleLogOut = async () => {
         try {
             await logoutApi({}).unwrap();
@@ -52,16 +51,13 @@ function Header() {
                 <div className="flex lg:hidden">
                     <div className="flex flex-1 justify-end gap-2 pr-3">
                         {localStorage.getItem('userInfo') ? (
-                            <div className="flex gap-3 items-center">
-                                <h3>{userInfo.profile.firstName}</h3>
-                                <button
-                                    onClick={handleLogOut}
-                                    type="button"
-                                    className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
-                                >
-                                    Log out
-                                </button>
-                            </div>
+                            <button
+                                onClick={handleLogOut}
+                                type="button"
+                                className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
+                            >
+                                Log out
+                            </button>
                         ) : (
                             <>
                                 <a href="/login" className="border bg-green-600 text-sm leading-6 text-gray-900 text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
@@ -83,16 +79,13 @@ function Header() {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
                     {localStorage.getItem('userInfo') ? (
-                        <div className="flex gap-3 items-center">
-                            <h3>{userInfo.profile.firstName}</h3>
-                            <button
-                                onClick={handleLogOut}
-                                type="button"
-                                className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
-                            >
-                                Log out
-                            </button>
-                        </div>
+                        <button
+                            onClick={handleLogOut}
+                            type="button"
+                            className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
+                        >
+                            Log out
+                        </button>
                     ) : (
                         <>
                             <Link to="/login" className="border bg-green-600 text-sm leading-6  text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">

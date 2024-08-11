@@ -27,7 +27,6 @@ function Login() {
     };
     return (
         <section>
-          
             <div className="flex flex-col items-center mt-10 px-6 py-8 mx-auto lg:py-0">
                 <div className="w-full bg-white rounded-lg md:mt-0 sm:max-w-md xl:p-0 border">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -90,7 +89,7 @@ function Login() {
                                 {isLoading ? 'Signing in...' : 'Sign in'}
                             </button>
                             <p className="text-sm text-gray-800">
-                                 Don’t have an account yet?
+                                Don’t have an account yet?
                                 <Link to="/signup" className=" hover:underline text-blue-900">
                                     Sign up
                                 </Link>

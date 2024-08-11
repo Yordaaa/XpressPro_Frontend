@@ -1,5 +1,5 @@
 import * as React from 'react';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -8,7 +8,7 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { Link } from 'react-router-dom';
 
 function Booking() {
-    const [value, setValue] = React.useState(dayjs(''));
+    const [value, setValue] = React.useState<Dayjs | null>(dayjs(''));
 
     const [bedrooms, setBedrooms] = React.useState<number>(3);
 
@@ -25,7 +25,7 @@ function Booking() {
     };
 
     const [showTimePicker, setShowTimePicker] = React.useState(false);
-    const [startDate, setStartDate] = React.useState(dayjs());
+    const [startDate, setStartDate] = React.useState<Dayjs | null>(dayjs());
     const [booktype, setBooktype] = React.useState('regular');
 
     return (
@@ -142,10 +142,11 @@ function Booking() {
                                 </form>
                             </div>
                         </div>
-
-                        <Link to="/car" className="flex justify-end pt-4 hover:underline">
-                            next
-                        </Link>
+                        <div className='flex  justify-end'>
+                            <Link to="/car" className="bg-green-600 text-white p-1 px-3 rounded-md mt-4 hover:opacity-80 w-fit ">
+                                next
+                            </Link>
+                        </div>
                     </div>
                 )}
 

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 const products = [
     {
@@ -69,9 +68,11 @@ function Car() {
                     </div>
                 ))}
             </div>
-            <Link to="/additional" className="flex justify-end pt-4 hover:underline">
-                next
-            </Link>
+            <div className="flex  justify-end">
+                <Link to="/additional" className="bg-green-600 text-white p-1 px-3 rounded-md mt-4 hover:opacity-80 w-fit ">
+                    next
+                </Link>
+            </div>
         </div>
     );
 }
