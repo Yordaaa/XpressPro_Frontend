@@ -1,12 +1,12 @@
 import * as React from 'react';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 function Booking() {
-    const [value, setValue] = React.useState(dayjs(''));
-    const [startDate, setStartDate] = React.useState(dayjs());
+    const [value, setValue] = React.useState<Dayjs | null>(dayjs(''));
+    const [startDate, setStartDate] = React.useState<Dayjs | null>(dayjs());
     const products = [
         {
             id: 1,
