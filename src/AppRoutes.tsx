@@ -6,6 +6,9 @@ import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
 import Login from "./Pages/AuthPages/Login";
 import Signup from "./Pages/AuthPages/Signup";
+import AdditionalService from "./Components/AdditionalService";
+import Car from "./Components/Car";
+import Review from "./Pages/Review";
 
 
 function AppRoutes() {
@@ -17,6 +20,9 @@ function AppRoutes() {
     <Route path="aboutus" element={<AboutUs />} />
     <Route path="login" element={<Login />} />
     <Route path="signup" element={<Signup />} />
+    <Route path="additional" element={<AdditionalService />} />
+    <Route path="car" element={<Car />} />
+    <Route path="review" element={<Review />} />
   </Routes>;
 }
 

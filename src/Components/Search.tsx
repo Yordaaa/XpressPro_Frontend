@@ -4,6 +4,7 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 
 function Search() {
   const [value, setValue] = React.useState(dayjs(''));
@@ -101,7 +102,7 @@ function Search() {
                         value={startDate}
                         onChange={(newValue) => setStartDate(newValue)}
                     />
-                    <DatePicker label="End-date" value={value} onChange={(newValue) => setValue(newValue)} />
+                    <TimePicker label="Pick your time" />
                 </DemoContainer>
             </LocalizationProvider>
         </div>
