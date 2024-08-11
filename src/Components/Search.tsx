@@ -7,7 +7,6 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 
 function Search() {
-    const [value, setValue] = React.useState<dayjs.Dayjs | null>(dayjs(''));
     const [startDate, setStartDate] = React.useState<dayjs.Dayjs | null>(dayjs());
     return (
         <div className="mx-5 md:mx-20 py-2 ">

@@ -1,5 +1,3 @@
-import { PaperClipIcon } from '@heroicons/react/20/solid';
-
 export default function Review() {
     return (
         <div className="max-w-screen-md mx-auto pt-16">

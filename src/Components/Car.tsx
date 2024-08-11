@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 const products = [
     {
@@ -69,7 +68,9 @@ function Car() {
                     </div>
                 ))}
             </div>
-            <Link to="/additional" className='flex justify-end pt-4'>next</Link>
+            <Link to="/additional" className="flex justify-end pt-4">
+                next
+            </Link>
         </div>
     );
 }
