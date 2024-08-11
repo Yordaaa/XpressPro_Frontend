@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 
 import { FunnelIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid';
+import { Link } from 'react-router-dom';
 
 const filters = [
     {
@@ -206,7 +207,9 @@ export default function Cars() {
                                                         </div>
                                                         <p className="text-sm font-medium text-gray-900">{product.price}</p>
                                                     </div>
-                                                    <button className="w-full bg-green-600 text-white py-1 rounded-md mt-3">Book now</button>
+                                                    <Link to="/booking">
+                                                        <button className="w-full bg-green-600 text-white py-1 rounded-md mt-3 hover:opacity-80">Book now</button>
+                                                    </Link>
                                                 </div>
                                             ))}
                                         </div>
@@ -220,4 +223,3 @@ export default function Cars() {
         </div>
     );
 }
-

@@ -35,10 +35,10 @@ function Booking() {
                 <div className="my-10">
                     <div className=" mx-auto flex justify-center items-center p-2 md:p-0">
                         <div className="flex items-center justify-center space-x-4">
-                            <button className={`${booktype === 'regular' ? 'bg-green-600 text-white' : 'bg-gray-200'} px-4 py-1 rounded`} onClick={() => setBooktype('regular')}>
+                            <button className={`${booktype === 'regular' ? 'bg-green-600 hover:opacity-80 text-white' : 'bg-gray-200'} px-4 py-1 rounded`} onClick={() => setBooktype('regular')}>
                                 Regular
                             </button>
-                            <button className={`${booktype === 'custom' ? 'bg-green-600 text-white' : 'bg-gray-200'} px-4 py-1 rounded`} onClick={() => setBooktype('custom')}>
+                            <button className={`${booktype === 'custom' ? 'bg-green-600 hover:opacity-80 text-white' : 'bg-gray-200'} px-4 py-1 rounded`} onClick={() => setBooktype('custom')}>
                                 Custom
                             </button>
                         </div>
@@ -143,7 +143,7 @@ function Booking() {
                             </div>
                         </div>
 
-                        <Link to="/car" className="flex justify-end pt-4">
+                        <Link to="/car" className="flex justify-end pt-4 hover:underline">
                             next
                         </Link>
                     </div>
@@ -247,7 +247,7 @@ function Booking() {
                             </div>
                         </div>
 
-                        <Link to="/car" className="flex justify-end pt-4">
+                        <Link to="/car" className="flex justify-end pt-4 hover:underline">
                             next
                         </Link>
                     </div>
