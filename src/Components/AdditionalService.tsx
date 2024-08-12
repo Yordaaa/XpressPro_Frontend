@@ -1,44 +1,48 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-function AdditionalService() {
-    const [infantCarrier, setInfantCarrier] = React.useState<number>(0);
-    const [convertibleSeat, setConvertibleSeat] = React.useState<number>(0);
-    const [boosterSeat, setBoosterSeat] = React.useState<number>(0);
+interface AdditionalServiceFieldsProps {
+    Infant_carrier: number;
+    Convertible_seat: number;
+    Booster_seat: number;
+}
+interface AdditionalServiceProps extends AdditionalServiceFieldsProps {
+    updateFields: (fields: Partial<AdditionalServiceFieldsProps>) => void;
+}
 
+function AdditionalService({ Infant_carrier, Convertible_seat, Booster_seat, updateFields }: AdditionalServiceProps) {
     const handleDecrementInfant = (): void => {
-        if (infantCarrier > 0) {
-            setInfantCarrier(infantCarrier - 1);
+        if (Infant_carrier > 0) {
+            updateFields({ Infant_carrier: Infant_carrier - 1 });
         }
     };
 
     const handleIncrementInfant = (): void => {
-        if (infantCarrier < 100) {
-            setInfantCarrier(infantCarrier + 1);
+        if (Infant_carrier < 100) {
+            updateFields({ Infant_carrier: Infant_carrier + 1 });
         }
     };
 
     const handleDecrementConvertible = (): void => {
-        if (convertibleSeat > 0) {
-            setConvertibleSeat(convertibleSeat - 1);
+        if (Convertible_seat > 0) {
+            updateFields({ Convertible_seat: Convertible_seat - 1 });
         }
     };
 
     const handleIncrementConvertible = (): void => {
-        if (convertibleSeat < 100) {
-            setConvertibleSeat(convertibleSeat + 1);
+        if (Convertible_seat < 100) {
+            updateFields({ Convertible_seat: Convertible_seat + 1 });
         }
     };
 
     const handleDecrementBooster = (): void => {
-        if (boosterSeat > 0) {
-            setBoosterSeat(boosterSeat - 1);
+        if (Booster_seat > 0) {
+            updateFields({ Booster_seat: Booster_seat - 1 });
         }
     };
 
     const handleIncrementBooster = (): void => {
-        if (boosterSeat < 100) {
-            setBoosterSeat(boosterSeat + 1);
+        if (Booster_seat < 100) {
+            updateFields({ Booster_seat: Booster_seat + 1 });
         }
     };
 
@@ -60,7 +64,7 @@ function AdditionalService() {
                             <button type="button" className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11" onClick={handleDecrementInfant}>
                                 <i className="fas fa-minus"></i>
                             </button>
-                            <input type="text" className="bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 block w-full" value={infantCarrier} readOnly />
+                            <input type="text" className="bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 block w-full" value={Infant_carrier} />
                             <button type="button" className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11" onClick={handleIncrementInfant}>
                                 <i className="fas fa-plus"></i>
                             </button>
@@ -81,7 +85,7 @@ function AdditionalService() {
                             <button type="button" className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11" onClick={handleDecrementConvertible}>
                                 <i className="fas fa-minus"></i>
                             </button>
-                            <input type="text" className="bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 block w-full" value={convertibleSeat} readOnly />
+                            <input type="text" className="bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 block w-full" value={Convertible_seat} />
                             <button type="button" className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11" onClick={handleIncrementConvertible}>
                                 <i className="fas fa-plus"></i>
                             </button>
@@ -102,7 +106,7 @@ function AdditionalService() {
                             <button type="button" className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11" onClick={handleDecrementBooster}>
                                 <i className="fas fa-minus"></i>
                             </button>
-                            <input type="text" className="bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 block w-full" value={boosterSeat} readOnly />
+                            <input type="text" className="bg-gray-50 border-x-0 border-gray-300 h-11 font-medium text-center text-gray-900 block w-full" value={Booster_seat} />
                             <button type="button" className="bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11" onClick={handleIncrementBooster}>
                                 <i className="fas fa-plus"></i>
                             </button>
