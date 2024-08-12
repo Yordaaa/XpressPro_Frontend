@@ -1,4 +1,3 @@
-
 import Features from '../Components/Features';
 import Search from '../Components/Search';
 import Testmonials from '../Components/Testmonials';
@@ -6,7 +5,6 @@ import Testmonials from '../Components/Testmonials';
 function Home() {
     return (
         <>
-         
             <div
                 className="lg:h-fit pb-20 bg-center max-w-screen-2xl mx-auto max-h-fit"
                 style={{
