@@ -49,6 +49,23 @@ function Header() {
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
+                    <div className="flex flex-1 justify-end gap-2 pr-3">
+                        {localStorage.getItem('userInfo') ? (
+                            <button
+                                onClick={handleLogOut}
+                                type="button"
+                                className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
+                            >
+                                Log out
+                            </button>
+                        ) : (
+                            <>
+                                <a href="/login" className="border bg-green-600 text-sm leading-6 text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
+                                    Log in
+                                </a>
+                            </>
+                        )}
+                    </div>
                     <button type="button" onClick={() => setMobileMenuOpen(true)} className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <i className="fas fa-bars text-xl"></i>
                     </button>
@@ -85,10 +102,27 @@ function Header() {
                         <Link to="/" className="text-xl font-bold -m-1.5 p-1.5">
                             XpressPro
                         </Link>
+                        <div className="flex flex-1 justify-end gap-2 pr-3">
+                            {localStorage.getItem('userInfo') ? (
+                                <div className="flex gap-3 items-center">
+                                    
+                                    <button
+                                        onClick={handleLogOut}
+                                        type="button"
+                                        className="border border-green-600 text-sm leading-6 text-gray-900 bg-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800"
+                                    >
+                                        Log out
+                                    </button>
+                                </div>
+                            ) : (
+                                <>
+                                    <a href="/login" className="border bg-green-600 text-sm leading-6 text-white hover:text-white p-1 px-3 rounded-md hover:bg-green-800">
+                                        Log in
+                                    </a>
+                                </>
+                            )}
+                        </div>
                         <div className="flex gap-3">
-                            <a href="/login" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                Log in
-                            </a>
                             <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-md p-2.5 text-gray-700">
                                 <i className="fas fa-times text-xl"></i>
                             </button>

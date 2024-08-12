@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 
 interface AdditionalServiceFieldsProps {
     Infant_carrier: number;
@@ -50,7 +50,7 @@ function AdditionalService({ Infant_carrier, Convertible_seat, Booster_seat, upd
         <div className="pt-20">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 text-center">Additional Services</h2>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 max-w-screen-md mx-auto py-4">Child Seats</h2>
-            <div className="border max-w-screen-md mx-auto border-auto">
+            <div className="border max-w-screen-md mx-auto border-auto p-5 rounded-md">
                 {/* Infant Carrier */}
                 <div className="flex max-w-screen-md mx-auto justify-between px-10 border-b pb-3 border-gray-800 pt-5">
                     <div className="flex items-center pr-3">
@@ -122,11 +122,7 @@ function AdditionalService({ Infant_carrier, Convertible_seat, Booster_seat, upd
                         placeholder="Laugage information, special needs or task for the driver..."
                     ></textarea>
                 </div>
-                <div className="flex justify-end gap-5 py-5 pr-5">
-                    <Link to="/review">
-                        <button className="bg-green-600 text-white p-1 px-3 rounded">Book now</button>
-                    </Link>
-                </div>
+                
             </div>
         </div>
     );

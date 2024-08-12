@@ -5,6 +5,11 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import sedan from '/sedan.png';
+import suv from '/suv.png';
+import minibus from '/minibus.png';
+import pickup from '/pickup.png';
+import compact from '/compact.png';
 
 function Search() {
     const [startDate, setStartDate] = React.useState<dayjs.Dayjs | null>(dayjs());
@@ -13,20 +18,20 @@ function Search() {
             <div className="h-full bg-gray-100 w-full mx-auto mt-16 rounded-md ">
                 <div className=" grid grid-cols-3 lg:grid-cols-6 justify-center items-center">
                     <div>
-                        <img src="https://www.mekina.net/_next/image?url=https%3A%2F%2Fmekina.s3.eu-west-1.amazonaws.com%2Fcompact_760bdff232.png&w=256&q=75" alt="" />
+                        <img src={suv} alt="" />
                         <label className="flex justify-center text-center font-semibold text-lg">Suv</label>
                     </div>
                     <div>
-                        <img src="https://www.mekina.net/_next/image?url=https%3A%2F%2Fmekina.s3.eu-west-1.amazonaws.com%2Fpickup_47a318538f.png&w=256&q=75" alt="" />
+                        <img src={pickup} alt="" />
                         <label className="flex justify-center text-center font-semibold text-lg">Pickup</label>
                     </div>
                     <div>
-                        <img src="https://www.mekina.net/_next/image?url=https%3A%2F%2Fmekina.s3.eu-west-1.amazonaws.com%2Fminibus_fd69dde545.png&w=256&q=75" alt="" />
+                        <img src={minibus} alt="" />
                         <label className="flex justify-center text-center font-semibold text-lg">Minibus</label>
                     </div>
 
                     <div>
-                        <img src="https://www.mekina.net/_next/image?url=https%3A%2F%2Fmekina.s3.eu-west-1.amazonaws.com%2Fcompact_760bdff232.png&w=256&q=75" alt="" />
+                        <img src={compact} alt="" />
                         <label className="flex justify-center text-center font-semibold text-lg">Compact</label>
                     </div>
                     <div>
@@ -34,7 +39,7 @@ function Search() {
                         <label className="flex justify-center text-center font-semibold text-lg">Truck</label>
                     </div>
                     <div>
-                        <img src="https://www.mekina.net/_next/image?url=https%3A%2F%2Fmekina.s3.eu-west-1.amazonaws.com%2Fsedan_7c495b64b6.png&w=256&q=75" alt="" />
+                        <img src={sedan} alt="" />
                         <label className="flex justify-center text-center font-semibold text-lg">Sedan</label>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Header2() {
     return (
         <>
-            <div className="bg-white p-2 px-[53px] flex justify-between fixed top-0 left-0 right-0 z-50 shadow-md max-w-screen-2xl mx-auto">
+            <div className="bg-white p-2 px-[20px] md:px-[53px] flex justify-between fixed top-0 left-0 right-0 z-50 shadow-md max-w-screen-2xl mx-auto">
                 <div className="flex gap-5 text-sm">
                     <label>
                         <i className="fa fa-phone text-green-600 pr-2 "></i>+251 912 3456 675

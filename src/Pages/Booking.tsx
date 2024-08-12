@@ -54,7 +54,7 @@ function Booking() {
         alert('Form submitted');
     };
     return (
-        <div className="">
+        <div className="max-w-screen-md mx-auto px-3">
             <div className="mx-auto max-w-lg px-4 py-8 sm:px-6 sm:py-12 lg:max-w-4xl lg:px-8">
                 <h2 className="use text-4xl font-bold tracking-tight text-gray-900 text-center ">Book Now</h2>
             </div>
@@ -75,6 +75,7 @@ function Booking() {
                     {currentStepIndex + 1}/{steps.length}
                 </div>
                 {step}
+                <div className='flex justify-end'>
                 {!isFirstStep && (
                     <button type="button" onClick={back} className="mt-8  bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-4 mx-2 rounded-md focus:outline-none">
                         Back
@@ -83,6 +84,7 @@ function Booking() {
                 <button type="submit" className="mt-8  bg-gray-800 hover:bg-gray-700 text-white font-bold py-1 px-4 rounded-md focus:outline-none">
                     {isLastStep ? 'Book Now' : 'Next'}
                 </button>
+                </div>
             </form>
         </div>
     );
